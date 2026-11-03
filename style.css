@@ -1,0 +1,199 @@
+/* Body & Background */
+body {
+  margin: 0;
+  font-family: 'Happy Monkey', cursive;
+  text-align: center;
+  overflow: hidden; /* stops scrolling */
+  background: linear-gradient(135deg,#96aadf,#3d5ea7);
+  min-height: 100vh;
+}
+
+/* Full-screen screens */
+.screen {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Show first screen initially */
+#screen1 {
+  display: flex;
+}
+
+/* Dark / final screens */
+.dark-screen {
+  background: black;
+  color: white;
+}
+
+.final-screen {
+  background: linear-gradient(135deg,#96aadf,#3d5ea7);
+  color: white;
+}
+
+.birthday-message {
+  max-width: 500px;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.next-btn {
+  font-family:'Happy Monkey', cursive;
+  padding:12px 25px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#96aadf,#3d5ea7);
+  color:white;
+  cursor:pointer;
+  box-shadow:0 6px 12px rgba(0,0,0,0.2);
+  transition:all .3s ease;
+  margin-top:20px;
+}
+
+.next-btn:hover {
+  transform:scale(1.1);
+  box-shadow:0 8px 18px rgba(0,0,0,0.3);
+}
+
+.next-btn:active {
+  transform:scale(.95);
+}
+
+/* Banana */
+.banana {
+  font-size: 60px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.banana:hover { transform: scale(1.2); }
+
+/* Monkey GIF */
+.monkey {
+  width:200px;
+  margin-top:20px;
+}
+
+/* Gift */
+.gift {
+  font-size:60px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.gift:hover { transform:scale(1.2); }
+
+/* Cane + Laughing GIF */
+.cane-area {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  margin-top:20px;
+}
+
+#cane { width:120px; }
+.laugh-gif { width:150px; }
+
+/* Cake */
+.cake {
+  font-size:80px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.cake:hover { transform:scale(1.2); }
+
+/* Falling bananas animation */
+.falling-banana {
+  position: fixed;
+  top: -50px;
+  font-size: 30px;
+  animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh); }
+}
+
+/* Cane drop */
+.drop {
+  animation: drop 1s ease;
+}
+
+@keyframes drop {
+  0% { transform: translateY(-200px); opacity:0; }
+  100% { transform: translateY(0); opacity:1; }
+}
+
+/* Joke text */
+.joke-text {
+  font-size:20px;
+  font-weight:bold;
+}
+/* Envelope */
+.envelope{
+    font-size:150px; /* bigger envelope */
+    cursor:pointer;
+    transition:.3s;
+}
+
+.envelope:hover{
+    transform:scale(1.2);
+}
+
+
+/* Big titles on all screens */
+.screen h1 {
+    font-size: 60px; /* big main title */
+    margin-bottom: 20px;
+}
+
+.screen h2 {
+    font-size: 48px; /* slightly smaller than h1 */
+    margin-bottom: 15px;
+}
+
+.screen h3 {
+    font-size: 42px; /* for subtitles */
+    margin-bottom: 15px;
+}
+
+.screen p {
+    font-size: 28px; /* paragraph / instruction text */
+}
+/* Birthday message screen */
+.final-screen h1 {
+    font-size: 70px; /* extra big for impact */
+}
+
+.final-screen .birthday-message {
+    font-size: 28px;
+    max-width: 600px;
+    line-height: 1.4;
+}
+
+/* Dark screen text */
+.dark-screen h1 {
+    font-size: 60px;
+}
+
+.dark-screen p {
+    font-size: 26px;
+}
+
+/* Buttons look bigger on all screens */
+.next-btn {
+    font-size: 22px;
+    padding: 15px 30px;
+}

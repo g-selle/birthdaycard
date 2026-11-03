@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Monkey Birthday Card</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Screen 1: Envelope -->
+<div id="screen1" class="screen">
+  <h1>📬 You've got mail!</h1>
+  <p>Click the envelope to open</p>
+
+  <!-- Envelope as big image -->
+  <div class="envelope" onclick="nextScreen(2)">✉️</div>
+</div>
+
+<!-- Screen 2: Birthday Start -->
+<div id="screen2" class="screen">
+  <h1>🎉 Happy Birthday! 🎉</h1>
+  <p>Click the banana!</p>
+  <div class="banana" onclick="nextScreen(3)">🍌</div>
+</div>
+
+<!-- Screen 3: Monkey Surprise -->
+<div id="screen3" class="screen">
+  <img src="monkey.gif" class="monkey">
+  <h2> MONKEYY!! 🐒</h2>
+  <div class="next-btn" onclick="nextScreen(4)">Next Surprise</div>
+</div>
+
+<!-- Screen 4: Gift -->
+<div id="screen4" class="screen">
+  <h3> Present time!🎁</h3>
+  <div class="gift" onclick="nextScreen(5)">🎁</div>
+</div>
+
+<!-- Screen 5: Cane Joke -->
+<div id="screen5" class="screen">
+  <div class="cane-area">
+    <img id="cane" src="cane.jpg">
+    <img src="laugh.gif" class="laugh-gif">
+  </div>
+  <p class="joke-text"> You might need this now 😭</p>
+  <div class="next-btn" onclick="nextScreen(6)">Final Surprise</div>
+</div>
+
+<!-- Screen 6: Cake -->
+<div id="screen6" class="screen">
+  <h3> Make a wish!!</h3>
+  <div class="cake" onclick="blowCandles()">🎂</div>
+</div>
+
+<!-- Screen 7: Dark / Wish Moment -->
+<div id="screen7" class="screen dark-screen">
+  <h1>💨 YAY!</h1>
+</div>
+
+<!-- Screen 8: Final Birthday Message -->
+<div id="screen8" class="screen final-screen">
+  <h1>🎉 YAY!!! 🎉</h1>
+  <p class="birthday-message">
+    I hope you have such a beautiful and special day filled with lots of happiness, laughter, and good memories. 
+                          May this new chapter of life bring you lots of reasons to smile! 
+    Have an amazing brithday and enjoy your special day to the fullest! Wishing you so many wonderful things in this next year! 🫶🫶 🐒🍌
+  </p>
+</div>
+
+<!-- Music -->
+<audio id="music" loop>
+  <source src="spanish-song.mp4" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
